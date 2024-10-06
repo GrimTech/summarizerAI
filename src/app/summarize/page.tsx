@@ -21,7 +21,7 @@ export default function Summarize() {
   const [summarizationType, setSummarizationType] = useState<SummarizationType>('normal')
   const { showToast } = useToast()
 
-  const handleSummarize = async () => {
+  const useHandleSummarize = async () => {
     setIsLoading(true)
     try {
       const result = await useSummarizeText(text, summarizationType)
